@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Mochiy Pop P One", serif;
+    background-color: #0b1522;
+    position: relative;
+}
+
+.audio{
+    position: absolute;
+    bottom: 80px;
+    opacity: 1;
+    
+}
+.heart {
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart .9s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;  
+    font-size: 1.1rem; 
+    text-align: center;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: .7rem;
+    position: absolute;
+    bottom: -40px;
+    right: 30px;
+
+}
+
+.heart p {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    transform: rotate(45deg) translate(0,-50px);
+}
+
+@keyframes  heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 100px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    right: -50%;
+    border-radius: 100px;
+    box-shadow: 10px 10px 90px #f20044;
+}
